@@ -37,9 +37,9 @@ elif season == 'Winter':
         price_for_rent -= (price_for_rent * 0.25)
 
 if season != 'Autumn' and number_fishers % 2 == 0:
-    price_for_rent -= (price_for_rent * 0.5)
+    price_for_rent -= (price_for_rent * 0.05)
 
-if budget > price_for_rent:
+if budget >= price_for_rent:
     print(f'Yes! You have {budget - price_for_rent:.2f} leva left.')
 else:
     print(f'Not enough money! You need {price_for_rent - budget:.2f} leva.')
