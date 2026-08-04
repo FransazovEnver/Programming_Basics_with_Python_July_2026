@@ -7,7 +7,6 @@ room_type = input()
 rating = input()
 
 result = 0
-rating_positive_negative = 0
 
 if room_type == 'room for one person':
     result = days_of_stay * ROOM_FOR_ONE_PERSON
