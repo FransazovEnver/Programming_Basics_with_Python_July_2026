@@ -1,0 +1,16 @@
+number_one = int(input())
+number_two = int(input())
+
+for num in range(number_one, number_two + 1):
+    even_sum = 0
+    odd_sum = 0
+    for index, value in enumerate(str(num)):
+        if value == '0':
+            continue
+        elif index % 2 == 0:
+            even_sum += int(value)
+        else:
+            odd_sum += int(value)
+
+    if even_sum == odd_sum:
+        print(num, end=' ')
