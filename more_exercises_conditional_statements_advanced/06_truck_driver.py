@@ -23,6 +23,6 @@ elif 10000 < distance <= 20000:
 
 #not working properly needed refact
 salary = (distance * price) * 4
-total_salary -= (salary * 0.1)
+total_salary = salary -(salary * 0.1)
 
 print(f'{total_salary:.2f}')
