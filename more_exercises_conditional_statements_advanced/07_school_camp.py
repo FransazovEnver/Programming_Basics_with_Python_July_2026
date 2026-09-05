@@ -4,6 +4,7 @@ number_students = int(input())
 number_night = int(input())
 
 price = 0
+total = 0
 sport = ""
 
 if season == "Winter":
@@ -43,3 +44,15 @@ elif season == "Summer":
         sport = "Football"
     elif type_group == "mixed":
         sport = "Swimming"
+
+if 50 < number_students:
+    night_price = (price * number_night)
+    total = night_price - (night_price * 0.5)
+elif 20 <= number_students < 50:
+    night_price = (price * number_night)
+    total = night_price - (night_price * 0.15)
+elif 10 <= number_students < 20:
+    night_price = (price * number_night)
+    total = night_price - (night_price * 0.05)
+
+print(f'{sport} {total:.2f}lv')
