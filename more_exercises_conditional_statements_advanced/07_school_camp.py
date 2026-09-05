@@ -45,14 +45,17 @@ elif season == "Summer":
     elif type_group == "mixed":
         sport = "Swimming"
 
-if 50 < number_students:
-    night_price = (price * number_night)
+if 50 <= number_students:
+    night_price = number_students * (price * number_night)
     total = night_price - (night_price * 0.5)
-elif 20 <= number_students < 50:
-    night_price = (price * number_night)
+elif 20 <= number_students <= 50:
+    night_price = number_students * (price * number_night)
     total = night_price - (night_price * 0.15)
-elif 10 <= number_students < 20:
-    night_price = (price * number_night)
+elif 10 <= number_students <= 20:
+    night_price = number_students * (price * number_night)
     total = night_price - (night_price * 0.05)
+else:
+    total = number_students * (price * number_night)
 
-print(f'{sport} {total:.2f}lv')
+
+print(f'{sport} {total:.2f} lv.')
